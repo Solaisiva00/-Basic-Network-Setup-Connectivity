@@ -54,6 +54,28 @@ Build a simple topology, configure essential device settings, assign IP addresse
 
 6. **Add Interface Descriptions**:
    - Example: `description Link to SW1` on router interface `Gi0/0`
+  
+## 📝 code IOS CLI (Router)
+
+``` IOS
+Router>en
+Router#conf t
+Router(config)#int g0/0
+Router(config-if)#ip add 192.168.10.1 255.255.255.0
+Router(config-if)#no shut
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+Router(config)#int g0/1
+Router(config-if)#ip add 192.168.20.1 255.255.255.0
+Router(config-if)#no shut
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+
+```
 
 ---
 
